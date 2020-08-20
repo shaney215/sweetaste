@@ -1,0 +1,170 @@
+/* 訂閱-綠色區塊 */
+.subscribe {
+  background-color: $dgreen;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*logo+ 訂閱你我的甜蜜郵件 */
+.subscribe_logo {
+  display: flex;
+  color: $lgreen;
+  font-size: $tmd;
+  line-height: 33px;
+  font-weight: lighter;
+  align-items: center;
+  padding: 38px 0;
+  a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin-right: 20px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-light.svg");
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+  }
+}
+
+/* email欄整體 */
+.email {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+}
+/* input灰色區塊 */
+.icon {
+  width: 266px;
+  height: 56px;
+  background-color: $lgreen;
+  border: none;
+  padding: 0 0 0 50px;
+}
+
+.email_icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  border: none;
+  top: 16px;
+  left: 20px;
+}
+input:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+/* submit button */
+.arrow {
+  width: 64px;
+  height: 56px;
+  background-color: $yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.arrow:hover {
+  background-color: orange;
+}
+
+/* footer灰色區塊 */
+.contact {
+  background-color: $lgreen;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact_content {
+  color: $dgreen;
+}
+/* sweetaste_logo */
+.contact_logo {
+  width: 171.22px;
+  height: 26.6px;
+  margin-bottom: 115.5px;
+  padding-top: 38.9px;
+  display: block;
+}
+/* line +fb icon */
+.contact_icon {
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+}
+
+/* slogan和版權的block */
+.slogan_block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* 今天是個吃甜點的好日子 */
+.slogan {
+  writing-mode: vertical-lr;
+  font-size: $tmd;
+  color: $dgreen;
+  margin-top: 30px;
+  letter-spacing: 5px;
+}
+/* 版權 */
+.rights {
+  color: $dgreen;
+  margin-top: 30px;
+}
+
+/* ipad 768不做因為我覺得他在768的時候版型我很喜歡然後我沒有ipad */
+@media (max-width: 767px) {
+  /* 手機板 */
+  /* 調整footer綠色區塊元件成為上下排列 */
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .subscribe_logo {
+    padding: 33px 0;
+  }
+  .email {
+    padding-bottom: 30px;
+  }
+ 
+}
+
+@media (max-width: 630px) {
+  /* 630以下就讓它只顯示一張卡 */
+   /* 灰色聯絡區塊調整內容 */
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .slogan_block {
+    align-items: center;
+  }
+  .contact_icon {
+    padding-bottom: 0;
+  }
+  .rights {
+    margin-top: 23px;
+  }
+  .contact_logo {
+    margin-bottom: 39.5px;
+  }
+}
+
+/* 調整email輸入框長度比例 */
+  @media (max-width: 400px) {
+    .icon {
+      width: 180px;
+    }
+    
+  }

@@ -1,0 +1,112 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  align-items: center;
+  position: relative;
+
+  /* navbar的logo */
+  .logo {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+    text-indent: 101%;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 219.49px;
+  }
+}
+
+/* navbar的漢堡button */
+.navbar_toggler {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* navbar的選單區塊含購物車 */
+.navbar_collapse {
+  display: flex;
+  align-items: center;
+}
+
+/* navbar選單文字 */
+.navbar_menu {
+  display: flex;
+  max-height: 0px;
+  align-items: center;
+
+  /* 展開選單的trigger */
+  .trigger {
+    max-height: 200px;
+  }
+
+  a {
+    color: $dgreen;
+    text-decoration: none;
+    font-weight: bolder;
+    display: block;
+    padding: 0 30px;
+  }
+
+  }
+
+/* navbr選單購物車 */
+.navbar_menu_shoppingcart {
+  padding-left: 30px;
+}
+
+/* ipad 768不做因為我覺得他在768的時候版型我很喜歡然後我沒有ipad */
+@media (max-width: 767px) {
+  /* 手機板 */
+  /* 漢堡 */
+  /* 漢堡icon出現 */
+  .navbar_toggler {
+    display: block;
+  }
+
+  .navbar_toggler:focus {
+    outline: 0;
+  }
+  /* 選單設定 */
+  .navbar_menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    transition: all 0.8s;
+    overflow: hidden;
+    background: white;
+    flex-direction: column;
+
+    a {
+      padding: 10px 0;
+      text-align: center;
+    }
+    /* 讓選單滿版 */
+    li {
+      width: 100%;
+    }
+
+    li:hover {
+      background-color: #eaf0ed;
+    }
+  }
+
+  .navbar_menu_shoppingcart {
+    padding-left: 0;
+  }
+}
+
+/* 調整email輸入框長度比例跟navbar_logo */
+  @media (max-width: 400px) {
+  
+    .navbar .logo {
+      width: 114px;
+      background-size: contain;
+      height: 30px;
+    }
+  }

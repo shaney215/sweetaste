@@ -1,0 +1,543 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  /* navbar的logo */
+}
+
+.navbar .logo {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+  text-indent: 101%;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 219.49px;
+}
+
+/* navbar的漢堡button */
+.navbar_toggler {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* navbar的選單區塊含購物車 */
+.navbar_collapse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* navbar選單文字 */
+.navbar_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 展開選單的trigger */
+}
+
+.navbar_menu .trigger {
+  max-height: 200px;
+}
+
+.navbar_menu a {
+  color: #3f5d45;
+  text-decoration: none;
+  font-weight: bolder;
+  display: block;
+  padding: 0 30px;
+}
+
+/* navbr選單購物車 */
+.navbar_menu_shoppingcart {
+  padding-left: 30px;
+}
+
+/* ipad 768不做因為我覺得他在768的時候版型我很喜歡然後我沒有ipad */
+@media (max-width: 767px) {
+  /* 手機板 */
+  /* 漢堡 */
+  /* 漢堡icon出現 */
+  .navbar_toggler {
+    display: block;
+  }
+  .navbar_toggler:focus {
+    outline: 0;
+  }
+  /* 選單設定 */
+  .navbar_menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow: hidden;
+    background: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* 讓選單滿版 */
+  }
+  .navbar_menu a {
+    padding: 10px 0;
+    text-align: center;
+  }
+  .navbar_menu li {
+    width: 100%;
+  }
+  .navbar_menu li:hover {
+    background-color: #eaf0ed;
+  }
+  .navbar_menu_shoppingcart {
+    padding-left: 0;
+  }
+}
+
+/* 調整email輸入框長度比例跟navbar_logo */
+@media (max-width: 400px) {
+  .navbar .logo {
+    width: 114px;
+    background-size: contain;
+    height: 30px;
+  }
+}
+
+.banner {
+  background-image: url("https://bit.ly/2P7GhNd");
+  margin-bottom: 60px;
+  width: 940px;
+  max-width: 100%;
+  height: 460px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pay_success .text {
+  font-size: 45px;
+  color: #3f5d45;
+}
+
+.check_circle {
+  color: #3f5d45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.check_circle hr {
+  width: 66px;
+  background-color: #3f5d45;
+  height: 1px;
+  border: none;
+  margin: -2px;
+}
+
+.check_circle span {
+  height: 20px;
+  width: 20px;
+}
+
+.keep_shopping {
+  width: 300px;
+  background-color: #FFE180;
+  margin-top: 51.34px;
+}
+
+.keep_shopping a {
+  display: block;
+  padding: 17px 102px 15px 102px;
+  line-height: 33px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #3f5d45;
+  font-weight: bold;
+}
+
+.keep_shopping a:hover {
+  background-color: orange;
+}
+
+@media (max-width: 767px) {
+  /* 手機板 */
+  .banner {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .keep_shopping {
+    margin-top: 0;
+    position: absolute;
+    bottom: -65px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 訂閱-綠色區塊 */
+.subscribe {
+  background-color: #3f5d45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*logo+ 訂閱你我的甜蜜郵件 */
+.subscribe_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #eaf0ed;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: lighter;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 38px 0;
+}
+
+.subscribe_logo a {
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin-right: 20px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-light.svg");
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+}
+
+/* email欄整體 */
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 100%;
+}
+
+/* input灰色區塊 */
+.icon {
+  width: 266px;
+  height: 56px;
+  background-color: #eaf0ed;
+  border: none;
+  padding: 0 0 0 50px;
+}
+
+.email_icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  border: none;
+  top: 16px;
+  left: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* submit button */
+.arrow {
+  width: 64px;
+  height: 56px;
+  background-color: #FFE180;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.arrow:hover {
+  background-color: orange;
+}
+
+/* footer灰色區塊 */
+.contact {
+  background-color: #eaf0ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact_content {
+  color: #3f5d45;
+}
+
+/* sweetaste_logo */
+.contact_logo {
+  width: 171.22px;
+  height: 26.6px;
+  margin-bottom: 115.5px;
+  padding-top: 38.9px;
+  display: block;
+}
+
+/* line +fb icon */
+.contact_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contact_icon img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+/* slogan和版權的block */
+.slogan_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* 今天是個吃甜點的好日子 */
+.slogan {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 24px;
+  color: #3f5d45;
+  margin-top: 30px;
+  letter-spacing: 5px;
+}
+
+/* 版權 */
+.rights {
+  color: #3f5d45;
+  margin-top: 30px;
+}
+
+/* ipad 768不做因為我覺得他在768的時候版型我很喜歡然後我沒有ipad */
+@media (max-width: 767px) {
+  /* 手機板 */
+  /* 調整footer綠色區塊元件成為上下排列 */
+  .subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subscribe_logo {
+    padding: 33px 0;
+  }
+  .email {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 630px) {
+  /* 630以下就讓它只顯示一張卡 */
+  /* 灰色聯絡區塊調整內容 */
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slogan_block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact_icon {
+    padding-bottom: 0;
+  }
+  .rights {
+    margin-top: 23px;
+  }
+  .contact_logo {
+    margin-bottom: 39.5px;
+  }
+}
+
+/* 調整email輸入框長度比例 */
+@media (max-width: 400px) {
+  .icon {
+    width: 180px;
+  }
+}
+/*# sourceMappingURL=page1.css.map */

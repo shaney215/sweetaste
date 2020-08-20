@@ -1,0 +1,215 @@
+/* banner圖片 */
+.banner {
+  margin-bottom: 60px;
+}
+/* 圖下面的全部區塊=side_list + dissert_list */
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+/*左側選單CSS*/
+
+.side_list {
+  width: 100%;
+  font-size: $tmd;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 20px;
+  flex: 1 0;
+}
+
+.side_list_item li {
+  border: $lgreen solid 1px;
+  border-top: none;
+}
+.side_list_item a {
+  text-decoration: none;
+  color: $dgreen;
+  display: block;
+  font-weight: bold;
+  padding: 16px 0;
+}
+
+.side_list_item a:hover {
+  background-color: $lgreen;
+}
+/* 左側選單的甜點類別 */
+.side_list h2 {
+  background: $dgreen;
+  color: $lgreen;
+  border-left-color: $dgreen;
+  border-right-color: $dgreen;
+  border-bottom-color: $dgreen;
+  padding: 16px 0;
+  display: block;
+}
+
+/* 商品卡片區塊 */
+.dessert_list {
+  display: flex;
+  width: 620px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+
+.dessert_list:last-child {
+  margin-bottom: 10px;
+}
+
+/*單個商品卡CSS*/
+
+.card {
+  margin-bottom: 20px;
+}
+.pricetag {
+  display: flex;
+  color: $dgreen;
+  font-size: $ts;
+  line-height: 28px;
+}
+
+.pricetag p:nth-child(1) {
+  padding: 14px 0;
+  box-sizing: border-box;
+  width: 173px;
+  border-left: $lgreen solid 1px;
+  border-right: $lgreen solid 1px;
+  text-align: center;
+}
+.pricetag p:nth-child(2) {
+  padding: 14px 0;
+  box-sizing: border-box;
+  width: 127px;
+  border-right: $lgreen solid 1px;
+  text-align: center;
+}
+/* 加入購物車 */
+.shoppingcart {
+  background-color: $lgreen;
+}
+
+.shoppingcart a {
+  display: block;
+  text-decoration: none;
+  padding: 16px 0;
+  text-align: center;
+  font-size: $tmd;
+  line-height: 33px;
+  color: $dgreen;
+}
+
+.shoppingcart a:hover {
+  background-color: $dgreen;
+  color: $lgreen;
+}
+/* 本日精選與最愛 */
+.pic {
+  position: relative;
+}
+.select {
+  writing-mode: vertical-lr;
+  background-color: $dgreen;
+  padding: 10px 10px;
+  color: $lgreen;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 2.5px;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+}
+
+.favorite {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+}
+
+/* 頁碼 */
+.pagenum {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.pagenum a {
+  border: $lgreen solid 1px;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  color: $dgreen;
+  text-decoration: none;
+  line-height: 28px;
+  display: flex;
+}
+
+.pagenum a:hover {
+  background-color: $dgreen;
+  color: $lgreen;
+}
+
+.pagenum :last-child a {
+    padding:18px;
+  &:hover {
+    background-color: $lgreen;
+  }
+}
+
+.pagenum :first-child a {
+    padding:18px;
+  &:hover {
+    background-color: $lgreen;
+  }
+}
+
+
+/* 調整選單文字 */
+@media (max-width: 920px) {
+  .side_list {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/* ipad 768不做因為我覺得他在768的時候版型我很喜歡然後我沒有ipad */
+@media (max-width: 767px) {
+  /* 手機板 */
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side_list {
+    width: 100%;
+    font-size: 24px;
+    line-height: 20px;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  .dessert_list {
+    width: 100%;
+    justify-content: space-around;
+  }
+  /* 取消圖片下方空格 */
+  .banner {
+    margin-bottom: 0;
+  }
+  /* 頁碼置中 */
+  .pagenum {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 630px) {
+  /* 630以下就讓它只顯示一張卡 */
+  .dessert_list {
+    width: 300px;
+    justify-content: center;
+  }
+  /* 今天是吃甜點的好日子消失 */
+  .slogan {
+    display: none;
+  }
+}
